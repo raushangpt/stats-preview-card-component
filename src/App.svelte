@@ -1,0 +1,48 @@
+<script>
+  let stat = [
+    ['10k+', 'companies'],
+    ['314', 'templates'],
+    ['12m+', 'queries'],
+  ];
+</script>
+
+<div class="grid h-screen w-screen place-items-center bg-blue-200">
+  <div
+    class="font-inter max-w-xs overflow-hidden rounded-lg sm:max-w-sm lg:grid lg:max-w-screen-lg lg:grid-cols-2">
+    <picture class="relative lg:order-last">
+      <source
+        srcset="./images/image-header-desktop.jpg"
+        media="(min-width: 1024px)" />
+      <img src="./images/image-header-mobile.jpg" alt="" />
+      <div class="bg-violet/50 absolute inset-0" />
+    </picture>
+
+    <div
+      class="space-y-8 bg-blue-100 p-6 sm:p-8 lg:flex lg:flex-col lg:justify-between lg:space-y-0 lg:p-16">
+      <div class="space-y-4">
+        <h1
+          class="text-center text-2xl font-bold tracking-wider text-gray-100 sm:text-3xl lg:text-left">
+          Get <span class="text-violet">insights</span> that help your business grow.
+        </h1>
+
+        <p class="text-center text-gray-200 sm:tracking-wider lg:text-left">
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
+      </div>
+
+      <div class="space-y-4 lg:flex lg:justify-between lg:space-y-0">
+        {#each stat as [count, metric]}
+          <div class="flex flex-col text-center lg:text-left">
+            <span class="text-2xl font-bold uppercase text-gray-100">
+              {count}
+            </span>
+            <span class="font-lexend-deca uppercase text-gray-300">
+              {metric}
+            </span>
+          </div>
+        {/each}
+      </div>
+    </div>
+  </div>
+</div>
