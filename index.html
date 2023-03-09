@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>stats preview card component</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <div id="app"></div>
-  <script type="module" src="./src/main.js"></script>
-</body>
-
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="./favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./index.css" />
+        <title>Stats Preview Card Component</title>
+    </head>
+    <body>
+        <div class="grid h-screen w-screen place-items-center bg-blue-200">
+            <div class="font-inter max-w-xs overflow-hidden rounded-lg sm:max-w-sm lg:grid lg:max-w-screen-lg lg:grid-cols-2">
+                <picture class="relative lg:order-last">
+                    <source srcset="./images/image-header-desktop.jpg" media="(min-width: 1024px)" />
+                    <img src="./images/image-header-mobile.jpg" alt="" />
+                    <div class="bg-violet/50 absolute inset-0"></div>
+                </picture>
+                <div class="space-y-8 bg-blue-100 p-6 sm:p-8 lg:flex lg:flex-col lg:justify-between lg:space-y-0 lg:p-16">
+                    <div class="space-y-4">
+                        <h1 class="text-center text-2xl font-bold tracking-wider text-gray-100 sm:text-3xl lg:text-left">
+                            Get <span class="text-violet">insights</span> that help your business grow.
+                        </h1>
+                        <p class="text-center text-gray-200 sm:tracking-wider lg:text-left">
+                            Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
+                        </p>
+                    </div>
+                    <div class="space-y-4 lg:flex lg:justify-between lg:space-y-0">
+                        <div class="flex flex-col text-center lg:text-left">
+                            <span class="text-2xl font-bold uppercase text-gray-100">10k+</span>
+                            <span class="font-lexend-deca uppercase text-gray-300">companies</span>
+                        </div>
+                        <div class="flex flex-col text-center lg:text-left">
+                            <span class="text-2xl font-bold uppercase text-gray-100">314</span>
+                            <span class="font-lexend-deca uppercase text-gray-300">templates</span>
+                        </div>
+                        <div class="flex flex-col text-center lg:text-left">
+                            <span class="text-2xl font-bold uppercase text-gray-100">12m+</span>
+                            <span class="font-lexend-deca uppercase text-gray-300">queries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
